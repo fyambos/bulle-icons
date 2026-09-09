@@ -1,0 +1,55 @@
+{
+  "name": "@bulle/icons",
+  "version": "0.0.0",
+  "description": "Open source icon font for web and React Native.",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": ["./dist/bulle-icon.js", "./dist/bulle-icons.css"],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./element": "./dist/bulle-icon.js",
+    "./react-native": {
+      "types": "./dist/react-native/index.d.ts",
+      "default": "./dist/react-native/index.js"
+    },
+    "./react-native/font": {
+      "types": "./dist/react-native/font.d.ts",
+      "default": "./dist/react-native/font.js"
+    },
+    "./css": "./dist/bulle-icons.css",
+    "./font/*": "./dist/fonts/*",
+    "./svg/*": "./dist/svg/*",
+    "./sprite.svg": "./dist/sprite.svg",
+    "./icons.json": "./dist/icons.json",
+    "./package.json": "./package.json"
+  },
+  "files": ["dist", "icons", "meta", "README.md", "LICENSE"],
+  "scripts": {
+    "build": "node build/index.mjs",
+    "lint:icons": "node tools/lint-icons.mjs",
+    "test": "node --test test/*.test.mjs",
+    "new": "node tools/new-icon.mjs",
+    "demo": "node build/index.mjs && open dist/demo/index.html",
+    "prepublishOnly": "npm run lint:icons && npm run build && npm test"
+  },
+  "keywords": ["icons", "icon-font", "svg", "web-component", "ttf", "woff2", "bulle"],
+  "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2",
+    "opentype.js": "^2.0.0",
+    "pathkit-wasm": "^1.0.0",
+    "svg2ttf": "^6.1.0",
+    "svgicons2svgfont": "^16.0.0",
+    "svgo": "^4.1.0",
+    "svgpath": "^2.6.0",
+    "ttf2woff": "^3.0.0",
+    "ttf2woff2": "^8.0.1"
+  },
+  "engines": { "node": ">=18" }
+}
