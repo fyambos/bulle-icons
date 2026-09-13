@@ -1,0 +1,12 @@
+{
+  "check": { "category": "interface", "keywords": ["done", "ok", "confirm", "tick", "yes"] },
+  "dots": { "category": "interface", "keywords": ["more", "menu", "ellipsis", "options"] },
+  "dots-vertical": { "category": "interface", "keywords": ["more", "menu", "ellipsis", "options"], "from": "dots", "rotate": 90 },
+  "gear": { "category": "interface", "keywords": ["settings", "preferences", "options", "configure"] },
+  "heart": { "category": "interface", "keywords": ["like", "love", "favorite", "favourite"] },
+  "magnifier": { "category": "interface", "keywords": ["search", "find", "lookup", "explore"] },
+  "menu": { "category": "interface", "keywords": ["hamburger", "navigation", "lines", "reorder"] },
+  "minus": { "category": "interface", "keywords": ["remove", "subtract", "less"] },
+  "plus": { "category": "interface", "keywords": ["add", "new", "create"] },
+  "x": { "category": "interface", "keywords": ["close", "cancel", "dismiss", "clear"] }
+}
