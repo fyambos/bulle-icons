@@ -1,6 +1,6 @@
 # @bulle/icons
 
-Open source icon font for web.
+Open source icon font for web and React Native.
 
 Icons are drawn on a 24 unit grid with a 2 unit stroke. Some icons also have a filled version, named with `-fill` (`heart`, `heart-fill`).
 
@@ -37,6 +37,51 @@ Icons have the `font-size` and `color` of their parent.
 | `bi-fw` | fixed width of 1.25em |
 | `bi-spin` | turning icon, still when reduced motion is on |
 
+## React Native
+
+```jsx
+import { BulleIcon } from '@bulle/icons/react-native'
+
+<Text style={{ fontSize: 16 }}>
+  Tap <BulleIcon name="heart" /> to like.
+</Text>
+
+<BulleIcon name="paper-plane" size={24} color="#1d9bf0" />
+```
+
+Inside a `Text`, an icon has the size and the color of that text.
+
+| Prop | Value |
+|---|---|
+| `name` | icon name |
+| `size` | font size |
+| `color` | text color |
+| `style` | text style |
+
+The font has to be in the app before icons are rendered. With Expo, add it with the `expo-font` plugin, at build time.
+
+```json
+{
+  "expo": {
+    "plugins": [
+      ["expo-font", { "fonts": ["./node_modules/@bulle/icons/dist/react-native/fonts/BulleIcons.ttf"] }]
+    ]
+  }
+}
+```
+
+The font can also be loaded when the app starts.
+
+```jsx
+import { useFonts } from 'expo-font'
+import { FONT_FAMILY } from '@bulle/icons/react-native'
+import font from '@bulle/icons/react-native/font'
+
+const [loaded] = useFonts({ [FONT_FAMILY]: font })
+```
+
+Without Expo, list the folder `./node_modules/@bulle/icons/dist/react-native/fonts` in `assets` in `react-native.config.js`, then run `react-native-asset`.
+
 ## Web component
 
 ```html
@@ -55,6 +100,7 @@ The script contains the font, the stylesheet is not needed. `label` is read by s
 | `dist/bulle-icons.css` | stylesheet |
 | `dist/fonts/` | font in ttf, woff and woff2 |
 | `dist/bulle-icon.js` | web component |
+| `dist/react-native/` | React Native component and font |
 | `dist/svg/<name>.svg` | one SVG per icon |
 | `dist/sprite.svg` | all icons as `<symbol>`, for `<use href="#bi-heart">` |
 | `dist/icons.json` | markup, codepoint, category and keywords of each icon |
