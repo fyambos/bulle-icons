@@ -30,6 +30,18 @@
   "magnifier": 59817,
   "menu": 59823,
   "minus": 59826,
+  "people": 59844,
+  "people-fill": 59846,
+  "person": 59847,
+  "person-fill": 59851,
+  "person-minus": 59852,
+  "person-plus": 59853,
+  "person-plus-fill": 59854,
   "plus": 59874,
+  "smile": 59908,
+  "thumbs-down": 59925,
+  "thumbs-down-fill": 59926,
+  "thumbs-up": 59927,
+  "thumbs-up-fill": 59928,
   "x": 59946
 }

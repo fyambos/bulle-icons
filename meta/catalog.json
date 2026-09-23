@@ -24,6 +24,13 @@
   "magnifier": { "category": "interface", "keywords": ["search", "find", "lookup", "explore"] },
   "menu": { "category": "interface", "keywords": ["hamburger", "navigation", "lines", "reorder"] },
   "minus": { "category": "interface", "keywords": ["remove", "subtract", "less"] },
+  "people": { "category": "people", "keywords": ["users", "group", "team", "members", "community"] },
+  "person": { "category": "people", "keywords": ["user", "profile", "account", "member"] },
+  "person-minus": { "category": "people", "keywords": ["remove user", "unfollow", "kick"] },
+  "person-plus": { "category": "people", "keywords": ["add user", "follow", "invite", "new member"] },
   "plus": { "category": "interface", "keywords": ["add", "new", "create"] },
+  "smile": { "category": "people", "keywords": ["emoji", "happy", "face", "reaction"] },
+  "thumbs-down": { "category": "people", "keywords": ["dislike", "disapprove", "disagree", "vote"], "from": "thumbs-up", "flip": "y" },
+  "thumbs-up": { "category": "people", "keywords": ["like", "approve", "agree", "vote"] },
   "x": { "category": "interface", "keywords": ["close", "cancel", "dismiss", "clear"] }
 }
