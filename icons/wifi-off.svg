@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <mask id="cut" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+    <rect width="24" height="24" fill="#fff" stroke="none"/>
+    <path d="M5.41 2.59l16 16" stroke="#000"/>
+  </mask>
+  <circle cx="12" cy="18.5" r="1.5" fill="currentColor" stroke="none" mask="url(#cut)"/>
+  <path d="M8.46 14.96a5 5 0 0 1 7.08 0" mask="url(#cut)"/>
+  <path d="M5.28 11.78a9.5 9.5 0 0 1 13.44 0" mask="url(#cut)"/>
+  <path d="M2.6 9.1a13.3 13.3 0 0 1 18.8 0" mask="url(#cut)"/>
+  <path d="M4 4l16 16"/>
+</svg>
