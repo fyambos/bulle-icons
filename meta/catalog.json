@@ -21,6 +21,7 @@
   "arrows-clockwise": { "category": "arrows", "keywords": ["sync", "refresh", "update", "loop"] },
   "arrows-left-right": { "category": "arrows", "keywords": ["swap", "switch", "exchange", "transfer"] },
   "arrows-repeat": { "category": "arrows", "keywords": ["repost", "repeat", "reshare", "loop"] },
+  "arrows-repeat-level": { "category": "arrows", "keywords": ["repost", "repeat", "reshare", "loop"] },
   "arrows-up-down": { "category": "arrows", "keywords": ["swap", "sort", "reorder"], "from": "arrows-left-right", "rotate": 90 },
   "at": { "category": "communication", "keywords": ["mention", "email", "address", "username"] },
   "bag": { "category": "commerce", "keywords": ["shop", "store", "purchase", "cart"] },
