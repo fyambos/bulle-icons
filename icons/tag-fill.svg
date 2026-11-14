@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
   <mask id="cut" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
-    <rect width="24" height="24" fill="#fff" stroke="none"/><circle cx="8.5" cy="8.5" r="1.5" fill="#000" stroke="none"/>
+    <rect width="24" height="24" fill="#fff" stroke="none"/>
+    <circle cx="8.62" cy="8.62" r="1.5" fill="#000" stroke="none"/>
   </mask>
-  <path d="M4 5a1 1 0 0 1 1-1h6.6a2 2 0 0 1 1.4 0.6l7.9 7.9a2 2 0 0 1 0 2.8l-5.3 5.3a2 2 0 0 1-2.8 0L4.6 12.4A2 2 0 0 1 4 11z" fill="currentColor" mask="url(#cut)"/>
+  <path d="M4.255 5.225a0.97 0.97 0 0 1 0.97-0.97h6.402a1.94 1.94 0 0 1 1.358 0.582l7.663 7.663a1.94 1.94 0 0 1 0 2.716l-5.141 5.141a1.94 1.94 0 0 1-2.716 0L4.837 12.403A1.94 1.94 0 0 1 4.255 11.045z" fill="currentColor" mask="url(#cut)"/>
 </svg>
