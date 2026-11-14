@@ -1,4 +1,4 @@
-# @bulle/icons
+# bulle-icons
 
 Open source icon font for web and React Native.
 
@@ -9,13 +9,13 @@ Icons are drawn on a 24 unit grid with a 2 unit stroke. Some icons also have a f
 ## Install
 
 ```bash
-npm i @bulle/icons
+npm i bulle-icons
 ```
 
 ## Web
 
 ```html
-<link rel="stylesheet" href="node_modules/@bulle/icons/dist/bulle-icons.css">
+<link rel="stylesheet" href="node_modules/bulle-icons/dist/bulle-icons.css">
 
 <p>Tap <i class="bi bi-heart"></i> to like.</p>
 <button><i class="bi bi-paper-plane"></i> Send</button>
@@ -24,7 +24,7 @@ npm i @bulle/icons
 With a bundler, the stylesheet is imported from JavaScript.
 
 ```js
-import '@bulle/icons/css'
+import 'bulle-icons/css'
 ```
 
 Icons have the `font-size` and `color` of their parent.
@@ -42,7 +42,7 @@ Icons have the `font-size` and `color` of their parent.
 ## React Native
 
 ```jsx
-import { BulleIcon } from '@bulle/icons/react-native'
+import { BulleIcon } from 'bulle-icons/react-native'
 
 <Text style={{ fontSize: 16 }}>
   Tap <BulleIcon name="heart" /> to like.
@@ -66,7 +66,7 @@ The font has to be in the app before icons are rendered. With Expo, add it with 
 {
   "expo": {
     "plugins": [
-      ["expo-font", { "fonts": ["./node_modules/@bulle/icons/dist/react-native/fonts/BulleIcons.ttf"] }]
+      ["expo-font", { "fonts": ["./node_modules/bulle-icons/dist/react-native/fonts/BulleIcons.ttf"] }]
     ]
   }
 }
@@ -76,18 +76,18 @@ The font can also be loaded when the app starts.
 
 ```jsx
 import { useFonts } from 'expo-font'
-import { FONT_FAMILY } from '@bulle/icons/react-native'
-import font from '@bulle/icons/react-native/font'
+import { FONT_FAMILY } from 'bulle-icons/react-native'
+import font from 'bulle-icons/react-native/font'
 
 const [loaded] = useFonts({ [FONT_FAMILY]: font })
 ```
 
-Without Expo, list the folder `./node_modules/@bulle/icons/dist/react-native/fonts` in `assets` in `react-native.config.js`, then run `react-native-asset`.
+Without Expo, list the folder `./node_modules/bulle-icons/dist/react-native/fonts` in `assets` in `react-native.config.js`, then run `react-native-asset`.
 
 ## Web component
 
 ```html
-<script type="module" src="node_modules/@bulle/icons/dist/bulle-icon.js"></script>
+<script type="module" src="node_modules/bulle-icons/dist/bulle-icon.js"></script>
 
 <bulle-icon name="heart"></bulle-icon>
 <bulle-icon name="heart" label="Like"></bulle-icon>

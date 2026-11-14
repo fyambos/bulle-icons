@@ -1,6 +1,6 @@
 {
-  "name": "@bulle/icons",
-  "version": "0.0.0",
+  "name": "bulle-icons",
+  "version": "0.1.0",
   "description": "Open source icon font for web and React Native.",
   "license": "MIT",
   "type": "module",
