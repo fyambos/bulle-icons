@@ -217,7 +217,7 @@ ${css}</style>
     </nav>
     <div class="hero">
       <h1>Bulle Icons</h1>
-      <p>${count} icons for the web and React Native, in one font. They take the size and color of the text around them.</p>
+      <p>${count} icons designed for use in web, iOS, Android, and desktop apps. Support for SVG and icon fonts.</p>
       <div class="install">
         <code>npm i ${pkg.name}</code>
         <button class="btn" data-copy="npm i ${pkg.name}">${glyph('copy')} Copy</button>
