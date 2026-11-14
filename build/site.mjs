@@ -8,6 +8,25 @@ const repo = 'https://github.com/fyambos/bulle-icons'
 const npm = `https://www.npmjs.com/package/${pkg.name}`
 
 const esc = (text) => text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+const mono = 'ui-monospace, "SF Mono", SFMono-Regular, "Cascadia Code", "Roboto Mono", Menlo, Consolas, monospace'
+
+// Colors the HTML and JSX of the usage blocks: strings, keywords, tags, attributes, punctuation.
+const tokens = /(?<str>"[^"]*"|'[^']*')|(?<kw>\b(?:import|from)\b)|(?<open><\/?)(?<tag>[A-Za-z][\w-]*)|(?<attr>\b[A-Za-z-]+(?==|:))|(?<num>\b\d+\b)|(?<punct>[<>/={}():])/g
+function highlight (code) {
+  let html = ''
+  let last = 0
+  for (const match of code.matchAll(tokens)) {
+    html += esc(code.slice(last, match.index))
+    const g = match.groups
+    if (g.open) html += `<span class="t-punct">${esc(g.open)}</span><span class="t-tag">${g.tag}</span>`
+    else {
+      const kind = Object.keys(g).find((key) => g[key] !== undefined)
+      html += `<span class="t-${kind}">${esc(match[0])}</span>`
+    }
+    last = match.index + match[0].length
+  }
+  return html + esc(code.slice(last))
+}
 const glyph = (name) => `<i class="${cfg.prefix} ${cfg.prefix}-${name}" aria-hidden="true"></i>`
 
 // Usage examples, the same code as the README.
@@ -69,9 +88,11 @@ ${css}</style>
     --muted: #6b7280;
     --line: #e5e7eb;
     --soft: #f4f4f5;
+    --t-tag: #2f5f9e; --t-attr: #6a58a6; --t-str: #3d7655; --t-kw: #95583c; --t-num: #95583c;
   }
   @media (prefers-color-scheme: dark) {
-    :root { --bg: ${colors.dark.paper}; --fg: ${colors.dark.ink}; --muted: #8b8b93; --line: #26262b; --soft: #161619; }
+    :root { --bg: ${colors.dark.paper}; --fg: ${colors.dark.ink}; --muted: #8b8b93; --line: #26262b; --soft: #161619;
+      --t-tag: #9dc0ec; --t-attr: #b9addf; --t-str: #a9cfb5; --t-kw: #e2b9a3; --t-num: #e2b9a3; }
   }
   * { box-sizing: border-box; }
   html { scroll-padding-top: 96px; }
@@ -94,7 +115,7 @@ ${css}</style>
     display: inline-flex; align-items: center; gap: 12px; max-width: 100%;
     padding: 8px 8px 8px 16px; border: 1px solid var(--line); border-radius: 12px; background: var(--soft);
   }
-  .install code { font: 14px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace; overflow-x: auto; white-space: nowrap; }
+  .install code { font: 14px/1.4 ${mono}; overflow-x: auto; white-space: nowrap; }
   .facts { color: var(--muted); font-size: 13px; margin-top: 16px; }
   button { font: inherit; color: inherit; }
   .btn {
@@ -143,8 +164,17 @@ ${css}</style>
   .tabs button[aria-selected=true] { border-color: var(--line); color: var(--fg); background: var(--soft); }
   pre {
     margin: 0; padding: 16px; overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; background: var(--soft);
-    font: 13px/1.6 ui-monospace, SFMono-Regular, Menlo, monospace;
+    font: 13px/1.7 ${mono};
   }
+  .code { position: relative; }
+  .code .btn { position: absolute; top: 10px; right: 10px; }
+  .code pre { padding-right: 88px; }
+  .t-tag { color: var(--t-tag); }
+  .t-attr { color: var(--t-attr); }
+  .t-str { color: var(--t-str); }
+  .t-kw { color: var(--t-kw); }
+  .t-num { color: var(--t-num); }
+  .t-punct { color: var(--muted); }
   .more { color: var(--muted); font-size: 14px; }
   footer { color: var(--muted); font-size: 13px; padding: 24px 0 48px; border-top: 1px solid var(--line); margin-top: 32px; }
   footer .wrap { display: flex; gap: 16px; flex-wrap: wrap; }
@@ -226,9 +256,10 @@ ${css}</style>
       <button role="tab" data-tab="native" aria-selected="false">React Native</button>
       <button role="tab" data-tab="element" aria-selected="false">Web component</button>
     </div>
-    <pre data-panel="web">${esc(usage.web)}</pre>
-    <pre data-panel="native" hidden>${esc(usage.native)}</pre>
-    <pre data-panel="element" hidden>${esc(usage.element)}</pre>
+    ${Object.entries(usage).map(([id, code], i) => `<div class="code" data-panel="${id}"${i ? ' hidden' : ''}>
+      <pre>${highlight(code)}</pre>
+      <button class="btn" data-label="Code" data-copy="${esc(code).replace(/"/g, '&quot;')}">${glyph('copy')} Copy</button>
+    </div>`).join('\n    ')}
     <p class="more">Sizes, colors and the font setup for Expo are in the <a href="${repo}#readme">README</a>.</p>
   </div>
 </section>
@@ -347,7 +378,7 @@ ${css}</style>
   })
 
   document.querySelectorAll('[data-copy]').forEach((button) => {
-    button.addEventListener('click', () => copy(button.dataset.copy, 'Command'))
+    button.addEventListener('click', () => copy(button.dataset.copy, button.dataset.label || 'Command'))
   })
 
   document.getElementById('icons').addEventListener('click', (event) => {
