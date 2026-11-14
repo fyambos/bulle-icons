@@ -1,6 +1,6 @@
 {
   "name": "bulle-icons",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Open source icon font for web and React Native.",
   "license": "MIT",
   "repository": { "type": "git", "url": "git+https://github.com/fyambos/bulle-icons.git" },
