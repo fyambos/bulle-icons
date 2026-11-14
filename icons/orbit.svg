@@ -1,9 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
   <mask id="cut" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
     <rect width="24" height="24" fill="#fff" stroke="none"/>
-    <circle cx="18" cy="6" r="4" fill="#000" stroke="none"/>
+    <circle cx="12" cy="12" r="4.75" fill="#000" stroke="none"/>
+    <circle cx="19.5" cy="7.5" r="3.25" fill="#000" stroke="none"/>
   </mask>
-  <circle cx="12" cy="12" r="8.5" mask="url(#cut)"/>
-  <circle cx="12" cy="12" r="3"/>
-  <circle cx="18" cy="6" r="2"/>
+  <path d="M3.773 16.75A9.5 4.5 -30 1 0 20.227 7.25A9.5 4.5 -30 1 0 3.773 16.75z" mask="url(#cut)"/>
+  <circle cx="12" cy="12" r="3.25" fill="currentColor" stroke="none"/>
+  <circle cx="19.5" cy="7.5" r="1.75" fill="currentColor" stroke="none"/>
 </svg>
