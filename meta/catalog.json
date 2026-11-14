@@ -1,4 +1,5 @@
 {
+  "accessibility": { "category": "people", "keywords": ["a11y", "disability", "inclusive", "universal access", "accessible"] },
   "address-book": { "category": "communication", "keywords": ["contacts", "phonebook", "directory", "people"] },
   "alarm": { "category": "time", "keywords": ["alarm clock", "wake up", "reminder", "morning"] },
   "alien": { "category": "people", "keywords": ["extraterrestrial", "space", "ufo", "science fiction", "martian"] },
