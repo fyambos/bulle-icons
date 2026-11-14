@@ -10,6 +10,7 @@ import { buildJs } from './js.mjs'
 import { buildElement } from './element.mjs'
 import { buildReactNative } from './rn.mjs'
 import { buildDemo } from './demo.mjs'
+import { buildSite } from './site.mjs'
 import { buildPreview } from './preview.mjs'
 
 const started = Date.now()
@@ -37,6 +38,7 @@ await buildJs(icons)
 await buildElement(icons, fonts.woff2)
 await buildReactNative(icons, fonts.ttf)
 await buildDemo(icons, fonts.woff2)
+await buildSite(icons, fonts.woff2)
 await buildPreview(icons)
 
 log.done(`done in ${Date.now() - started}ms`)

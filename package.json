@@ -33,7 +33,7 @@
     "./icons.json": "./dist/icons.json",
     "./package.json": "./package.json"
   },
-  "files": ["dist", "icons", "meta", "README.md", "LICENSE"],
+  "files": ["dist", "!dist/site", "icons", "meta", "README.md", "LICENSE"],
   "scripts": {
     "build": "node build/index.mjs",
     "lint:icons": "node tools/lint-icons.mjs",

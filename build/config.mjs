@@ -12,7 +12,8 @@ export const dirs = {
   dist: path.join(root, 'dist'),
   svg: path.join(root, 'dist/svg'),
   fonts: path.join(root, 'dist/fonts'),
-  demo: path.join(root, 'dist/demo')
+  demo: path.join(root, 'dist/demo'),
+  site: path.join(root, 'dist/site')
 }
 
 // Side of the square grid every icon is drawn on.
