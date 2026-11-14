@@ -173,6 +173,7 @@
   "face-wink": { "category": "people", "keywords": ["joke", "emotion", "mood", "playful"] },
   "fangs": { "category": "people", "keywords": ["vampire", "bite", "teeth", "halloween", "horror"] },
   "file": { "category": "files", "keywords": ["document", "page", "paper"] },
+  "file-attach": { "category": "files", "keywords": ["attach", "attachment", "document", "clip"] },
   "file-exclamation": { "category": "files", "keywords": ["warning", "error", "document", "problem"] },
   "file-lock": { "category": "files", "keywords": ["private", "protected", "document", "secure"] },
   "file-off": { "category": "files", "keywords": ["hidden", "unavailable", "removed", "document"] },
