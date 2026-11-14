@@ -48,7 +48,7 @@ import { BulleIcon } from '@bulle/icons/react-native'
   Tap <BulleIcon name="heart" /> to like.
 </Text>
 
-<BulleIcon name="paper-plane" size={24} color="#1d9bf0" />
+<BulleIcon name="paper-plane" size={24} color="#4a7dff" />
 ```
 
 Inside a `Text`, an icon has the size and the color of that text.
